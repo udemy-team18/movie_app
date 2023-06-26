@@ -1,33 +1,36 @@
-import React from "react";
-// import { useNavigate, useParams } from "react-router-dom";
-// import list_movies from "../data/list_movies.json";
-import styles from "styles/css/detail.module.css";
-// import "../styles/detail.module.css"
+import Contents from "components/Contents";
+import { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 
-const detail = (props) => {
-  //   const movie = list_movies.data.movies[0];
-  //   console.log(Object.keys(movie));
-  //   console.log(Object.values(movie));
+function Detail() {
+  const [loading, setLoading] = useState(true);
+  const [movie, setMovie] = useState();
+  const { id } = useParams();
+  //   console.log(id);
+  useEffect(() => {
+    const getMovie = async () => {
+      const json = await (
+        await fetch(`https://yts.mx/api/v2/movie_details.json?movie_id=${id}`)
+      ).json();
+      setMovie(json.data.movie);
+      setLoading(false);
+    };
+    getMovie();
+  }, [id]);
+
+  console.log(movie);
+
   return (
-    <article>
-      <h2>{props.title}</h2>
-      <img src={props.coverImage} alt={props.title + "'s cover"} />
-      <h3>synopsis</h3>
-      {/* <span>{movie.synopsis}</span> */}
-      <h3>summary</h3>
-      <p>{props.summary}</p>
-      <div className={styles.desc_wrap}>
-        {/* <h3>title : {movie.title_long}</h3> */}
-        <span>id:{props.id}</span>
-        <span>year : {props.year}</span>
-        {/* <span>rating : {movie.rating}</span> */}
-        {/* <span>runtime : {movie.runtime}</span> */}
-        <span>genres : {props.genres}</span>
-        {/* <p>{movie.description_full}</p> */}
-      </div>
-      {/* <p className={styles.below}>date_uploaded : {movie.date_uploaded}</p> */}
-    </article>
+    <div>
+      {loading ? (
+        <h1>loading...</h1>
+      ) : (
+        <div>
+          <Contents movie={movie} />
+        </div>
+      )}
+    </div>
   );
-};
+}
 
-export default detail;
+export default Detail;
