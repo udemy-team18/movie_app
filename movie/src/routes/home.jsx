@@ -2,6 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import Main from "../pages/main";
 import Navi from "../components/navigation";
+import Footer from "../components/footer";
 import style from "../styles/css/main.module.css";
 
 function Home() {
@@ -40,6 +41,7 @@ function Home() {
           ))}
         </div>
       )}
+      <Footer />
     </div>
   );
 }
