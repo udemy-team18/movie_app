@@ -1,6 +1,8 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import Main from "../pages/main";
+import Navi from "../components/navigation";
+import style from "../styles/css/main.module.css";
 
 function Home() {
   const [loading, setLoading] = useState(true);
@@ -20,10 +22,11 @@ function Home() {
 
   return (
     <div>
+      <Navi />
       {loading ? (
-        <h1>loading...</h1>
+        <h1 className={style.loading}>loading...</h1>
       ) : (
-        <div>
+        <div className={style.container}>
           {movies.map((movie) => (
             <Main
               key={movie.id}

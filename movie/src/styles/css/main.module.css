@@ -2,52 +2,94 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Spoqa Han Sans Neo", "sans-serif";
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  position: absolute;
+  width: 200px;
+  height: 40px;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
+  padding: 3rem 3rem;
+  margin-top: 3rem;
+  background-image: linear-gradient(to right top, #f9f871, #ffe469, #ffd166, #ffbe66, #ffac69, #ff9d6d, #ff8f73, #ff827b, #fc7486, #f46993, #e861a2, #d65db1);
 }
 
 .movie {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-color: white;
-  margin-bottom: 70px;
+  margin-bottom: 4rem;
   padding-top: 150px;
   font-weight: 300;
-  padding: 20px;
-  border-radius: 5px;
+  padding: 2rem;
+  border-radius: 1rem;
   color: #adaeb9;
-  box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.25), 0 8px 16px -8px rgba(0, 0, 0, 0.3), 0 -6px 16px -6px rgba(0, 0, 0, 0.025);
+  transition: transform 0.5s ease;
+  box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.3);
 }
 .movie a {
   display: grid;
-  grid-template-columns: minmax(150px, 1fr) 2fr;
   grid-gap: 20px;
   text-decoration: none;
   color: inherit;
 }
 .movie img {
   position: relative;
-  top: -50px;
-  max-width: 150px;
+  max-width: 10rem;
   width: 100%;
-  margin-right: 30px;
-  box-shadow: 0 30px 60px -12px rgba(50, 50, 93, 0.25), 0 18px 36px -18px rgba(0, 0, 0, 0.3), 0 -12px 36px -8px rgba(0, 0, 0, 0.025);
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
-.movie .movie_-data .movie-title, .movie .movie_-data .movie-year {
-  margin: 0;
-  font-weight: 300;
+.movie .movie__data {
+  color: black;
 }
-.movie .movie_-data .movie-title {
+.movie .movie__data .movie__title {
+  margin: 1rem;
+  font-weight: 600;
+  text-align: center;
+}
+.movie .movie__data .movie__year {
+  font-weight: 500;
+  text-align: center;
+}
+.movie .movie__data .movie__title {
   margin-bottom: 5px;
   font-size: 24px;
   color: #2c2c2c;
+  text-align: center;
 }
-.movie .movie_-data .movie-genres {
+.movie .movie__data .movie__genres {
   list-style: none;
   padding: 0;
-  margin: 0;
+  font-weight: 500;
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   margin: 5px 0px;
 }
-.movie .movie_-data .movie-genres li, .movie .movie_-data .movie-year {
+.movie .movie__data .movie__genres li, .movie .movie__data .movie__year {
   margin-right: 10px;
   font-size: 14px;
+}
+
+.movie:hover {
+  transform: scale(1.03);
 }
