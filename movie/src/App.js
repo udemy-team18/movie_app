@@ -1,17 +1,16 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Detail from "pages/Detail";
+import { createBrowserRouter } from "react-router-dom";
+import Home from "./routes/home";
+// import "./App.css";
 
-function App() {
-  return (
-    <div className="App">
-      <Router>
-        <Routes>
-          <Route path="/detail/1" element={<Detail />} />
-        </Routes>
-      </Router>
-    </div>
-  );
-}
+const App = createBrowserRouter(
+  [
+    {
+      path: "/",
+      element: <Home />,
+    },
+  ],
+  { basename: process.env.PUBLIC_URL }
+);
 
 export default App;
