@@ -1,7 +1,8 @@
 import React from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import list_movies from "../data/list_movies.json";
-import styles from "styles/detail.css";
+import styles from "styles/detail.module.css";
+// import "../styles/detail.module.css"
 
 const detail = () => {
   const movie = list_movies.data.movies[0];
@@ -15,7 +16,7 @@ const detail = () => {
       <span>{movie.synopsis}</span>
       <h3>summary</h3>
       <p>{movie.summary}</p>
-      <div className="desc_wrap">
+      <div className={styles.desc_wrap}>
         <h3>title : {movie.title_long}</h3>
         <span>id:{movie.id}</span>
         <span>year : {movie.year}</span>
@@ -24,7 +25,7 @@ const detail = () => {
         <span>genres : {movie.genres}</span>
         <p>{movie.description_full}</p>
       </div>
-      <p className="below">date_uploaded : {movie.date_uploaded}</p>
+      <p className={styles.below}>date_uploaded : {movie.date_uploaded}</p>
     </article>
   );
 };
