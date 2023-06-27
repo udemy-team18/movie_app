@@ -136,7 +136,7 @@ table {
   box-sizing: border-box;
 }
 
-body {
+.article_wrapper {
   width: 100vw;
   height: 100vh;
   padding: 6rem 3rem;

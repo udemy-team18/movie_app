@@ -1,6 +1,7 @@
 import Contents from "components/Contents";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import styles from "../styles/css/detail.module.css";
 
 function Detail() {
   const [loading, setLoading] = useState(true);
@@ -25,7 +26,7 @@ function Detail() {
       {loading ? (
         <h1>loading...</h1>
       ) : (
-        <div>
+        <div className={styles.article_wrapper}>
           <Contents movie={movie} />
         </div>
       )}
