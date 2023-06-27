@@ -3,6 +3,9 @@ import { useState, useEffect } from "react";
 import Main from "pages/main"
 import Search from 'components/Search'
 function Home() {
+
+
+
   const [loading, setLoading] = useState(true);
   const [movies, setMovies] = useState();
   const getMovies = async () => {
@@ -20,10 +23,14 @@ function Home() {
 
   return (
     <div>
-      <Search/>
+      <Search
+      
+      object = {movies}
+      />
+
       {loading ? (
         <h1>loading...</h1>
-      ) : (
+      ) :  (
         
         <div>
           {movies.map((movie) => (

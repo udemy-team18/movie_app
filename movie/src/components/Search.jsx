@@ -3,27 +3,32 @@ import { FaMagnifyingGlass } from "react-icons/fa6";
 import styles from "styles/Search.module.css";
 
 
-function Search(){
+function Search(props){
     const [value,setValue] = useState('');
     
     const handleChange = (e)=>{
-        setValue(e.target.value);
+        setValue(e.target.value.toLowerCase());
     }
 
-    const handleClick = (e)=>{
-        console.log("클릭")
-    }
 
-    const movieFilter = ()=>{
+
+
+    const filter = ()=>{
+       const name =  props.object.filter((item)=>
+        item.title.toLowerCase().includes(value)
+        )
         
+        console.log(name);
     }
 
 
     return (
-        <div className = {styles.search}>
-            <input className = {styles.input} placeholder = "영화명을 입력하세요" onChange = {handleChange}></input>
-            <FaMagnifyingGlass className = {styles.icon} onClick = {handleClick}/>
-        </div>
+
+                
+                <div className = {styles.search}>
+                    <input className = {styles.input} placeholder = "영화명을 입력하세요" onChange = {handleChange}></input>
+                    <FaMagnifyingGlass className = {styles.icon} onClick = {filter}/>
+                </div> 
     )
 }
 
