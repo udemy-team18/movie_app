@@ -21,6 +21,8 @@ function Home() {
     getMovies();
   }, []);
 
+  console.log(movies);
+
   return (
     <div>
       <Navi />
@@ -30,6 +32,7 @@ function Home() {
         <div className={style.container}>
           {movies.map((movie) => (
             <Main
+              movie={movie}
               key={movie.id}
               id={movie.id}
               coverImage={movie.medium_cover_image}
