@@ -1,35 +1,25 @@
-.search{
-    
-    
-    height : 100px;
-    display :flex;
-    flex: row;
-    justify-content: space-between;
-    margin-top: 100px;;
-    
-    
+.search {
+  height: 100px;
+  display: flex;
+  flex: row;
+  justify-content: space-between;
+  margin-top: 100px;
 }
 
-
-.input{
-    width: 95%;
-    height : 50px;
+.input {
+  width: 95%;
+  height: 50px;
   padding: 0;
   border-width: 0;
-  border : 1px solid black;
+  border: 1px solid black;
   border-radius: 10px;
-    box-sizing : border-box;
-    text-align: center;
-    font-size : 1.5rem;
-
+  box-sizing: border-box;
+  text-align: center;
+  font-size: 1.5rem;
 }
 .icon {
-
-    margin-right : 15px;
-    margin-top : 5px;
-    width : 2rem;
-    height : 2rem;
-    
+  margin-right: 15px;
+  margin-top: 5px;
+  width: 2rem;
+  height: 2rem;
 }
-
-

@@ -1,5 +1,5 @@
 // import { Link } from "react-router-dom";
-import styles from "../styles/css/detail.module.css";
+import styles from '../styles/css/detail.module.css';
 
 function Contents({ movie }) {
   return (
