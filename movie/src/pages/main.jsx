@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-// import styles from "../styles/css/main.module.css";
-import style from "../styles/css/main.module.css";
+import style from "../styles/css/Main.module.css";
 
 function Main({ id, coverImage, title, year, summary, genres }) {
   return (
@@ -19,7 +18,6 @@ function Main({ id, coverImage, title, year, summary, genres }) {
           {genres == null ? "" : genres.map((g) => <li key={g}>{g}</li>)}
         </ul>
         <p className={style.movie__summary}>
-          {/* summary :{" "} */}
           {summary.length > 100 ? `${summary.slice(0, 100)}...` : summary}
         </p>
       </div>
