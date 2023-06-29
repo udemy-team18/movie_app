@@ -1,4 +1,5 @@
-import styles from "../styles/css/Detail.module.css";
+// import { Link } from "react-router-dom";
+import styles from "../styles/css/detail.module.css";
 
 function Contents({ movie }) {
   return (
