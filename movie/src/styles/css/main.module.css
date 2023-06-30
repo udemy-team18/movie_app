@@ -28,21 +28,7 @@
   grid-gap: 2rem;
   padding: 3rem 3rem;
   margin-top: 3rem;
-  background-image: linear-gradient(
-    to right top,
-    #f9f871,
-    #ffe469,
-    #ffd166,
-    #ffbe66,
-    #ffac69,
-    #ff9d6d,
-    #ff8f73,
-    #ff827b,
-    #fc7486,
-    #f46993,
-    #e861a2,
-    #d65db1
-  );
+  background-image: linear-gradient(to right top, #f9f871, #ffe469, #ffd166, #ffbe66, #ffac69, #ff9d6d, #ff8f73, #ff827b, #fc7486, #f46993, #e861a2, #d65db1);
 }
 
 .movie {
@@ -99,8 +85,7 @@
   flex-wrap: wrap;
   margin: 5px 0px;
 }
-.movie .movie__data .movie__genres li,
-.movie .movie__data .movie__year {
+.movie .movie__data .movie__genres li, .movie .movie__data .movie__year {
   margin-right: 10px;
   font-size: 14px;
 }
