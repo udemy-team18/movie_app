@@ -1,14 +1,7 @@
-<<<<<<< HEAD
-import Contents from "components/Contents";
-import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
-import styles from "../styles/css/Detail.module.css";
-=======
 import Contents from 'components/Contents';
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import styles from '../styles/css/detail.module.css';
->>>>>>> f28d4c55504c23b8bd8f442bf552c362e4699f10
+import styles from '../styles/css/Detail.module.css';
 
 function Detail() {
   const [loading, setLoading] = useState(true);
