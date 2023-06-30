@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { FaMagnifyingGlass } from 'react-icons/fa6';
-import styles from 'styles/css/search.module.css';
+import styles from '../styles/css/search.module.css';
 
 const Search = ({ object, getData }) => {
   const [value, setValue] = useState('');
@@ -17,7 +17,6 @@ const Search = ({ object, getData }) => {
   return (
     <div className={styles.search}>
       <input className={styles.input} placeholder="영화명을 입력하세요" onChange={handleChange}></input>
-
       <FaMagnifyingGlass className={styles.icon} onClick={filter} />
     </div>
   );

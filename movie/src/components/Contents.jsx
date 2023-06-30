@@ -1,3 +1,4 @@
+import React from 'react';
 import styles from '../styles/css/detail.module.css';
 
 function Contents({ movie }) {

@@ -1,7 +1,6 @@
 import React from 'react';
-// import { useState } from "react";
 import { Link } from 'react-router-dom';
-import styles from '../styles/css/Navi.module.css';
+import styles from '../styles/css/navi.module.css';
 
 function Navi() {
   return (

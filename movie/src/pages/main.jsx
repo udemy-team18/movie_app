@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import style from '../styles/css/Main.module.css';
+import style from '../styles/css/main.module.css';
 
 function Main({ id, coverImage, title, year, summary, genres }) {
   return (

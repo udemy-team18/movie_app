@@ -1,4 +1,5 @@
-import Contents from 'components/contents';
+import React from 'react';
+import Contents from '../components/contents';
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import styles from '../styles/css/detail.module.css';
