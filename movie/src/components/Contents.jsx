@@ -1,4 +1,4 @@
-import styles from '../styles/css/Detail.module.css';
+import styles from '../styles/css/detail.module.css';
 
 function Contents({ movie }) {
   return (

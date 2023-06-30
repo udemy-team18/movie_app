@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { FaMagnifyingGlass } from 'react-icons/fa6';
-import styles from 'styles/css/Search.module.css';
+import styles from 'styles/css/search.module.css';
 
 const Search = ({ object, getData }) => {
   const [value, setValue] = useState('');

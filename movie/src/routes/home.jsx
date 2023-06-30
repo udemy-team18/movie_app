@@ -1,10 +1,10 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
-import Main from '../pages/Main';
-import Navi from '../components/Navigation';
-import Footer from '../components/Footer';
-import style from '../styles/css/Main.module.css';
-import Search from '../components/Search';
+import Main from '../pages/main';
+import Navi from '../components/navigation';
+import Footer from '../components/footer';
+import style from '../styles/css/main.module.css';
+import Search from '../components/search';
 
 function Home() {
   const [loading, setLoading] = useState(true);

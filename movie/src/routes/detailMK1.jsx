@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from 'styles/css/Detail.module.css';
+import styles from 'styles/css/detail.module.css';
 
 const detail = props => {
   return (
