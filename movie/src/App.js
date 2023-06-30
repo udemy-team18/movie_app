@@ -1,12 +1,7 @@
 import React from "react";
 import { createBrowserRouter } from "react-router-dom";
-import Home from "./routes/Home";
-import Detail from "./routes/Detail";
-import React from 'react';
-import { createBrowserRouter } from 'react-router-dom';
-import Home from './routes/home';
-import Detail from './routes/detail';
-// import "./App.css";
+import Home from "./routes/home";
+import Detail from "./routes/detail";
 
 const App = createBrowserRouter(
   [
