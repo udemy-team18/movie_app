@@ -9,7 +9,7 @@ import Search from '../components/Search';
 function Home() {
   const [loading, setLoading] = useState(true);
   const [movies, setMovies] = useState();
-  const [input, setInput] = useState('');
+  // const [input, setInput] = useState('');
   const [child, setChild] = useState('');
 
   const getData = child => {
