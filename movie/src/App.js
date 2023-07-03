@@ -12,7 +12,6 @@ const App = createBrowserRouter(
     },
     { path: '/movie/:id', element: <Detail /> },
   ],
-  // eslint-disable-next-line no-undef
   { basename: process.env.PUBLIC_URL }
 );
 
