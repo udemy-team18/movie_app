@@ -13,6 +13,6 @@ module.exports = {
   plugins: ['react'],
   rules: {
     'react/prop-types': 'off',
-    'no-undef': 'off',
+    'no-undef': 'warn',
   },
 };
